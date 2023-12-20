@@ -50,9 +50,7 @@ then
     VALIDATE $? "roboshot user creation"
 else 
     echo -e "skipping"
-fi
-
-VALIDATE $? " creating roboshot user" 
+fi 
 
 mkdir -p /app &>> $LOGFILE
 
@@ -97,6 +95,6 @@ dnf install mongodb-org-shell -y &>> $LOGFILE
 
 VALIDATE $? "installing client" 
 
-mongo --host 172.31.31.173</app/schema/catalogue.js &>> $LOGFILE
+mongo --host mongodb.akhi.fun </app/schema/catalogue.js &>> $LOGFILE
 
 VALIDATE $? "loading catalogue data" 
