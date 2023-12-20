@@ -89,7 +89,7 @@ systemctl start catalogue &>> $LOGFILE
 
 VALIDATE $? "start catalogue" 
 
-cp /home/centos/roboshopshell/mongo.repo/etc/yum.repos.d/mongo.repo &>> $LOGFILE
+cp /home/centos/roboshopshell/mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
 
 VALIDATE $? "coping mongodb.repo" 
 
